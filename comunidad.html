@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comunidad - Realistic Soccer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="comunidad-header">
+        <h1>Comunidad</h1>
+    </header>
+    <main>
+        <div id="bienvenida-comunidad" class="comunidad-bienvenida">
+            <div class="comunidad-bienvenida-tarjeta">
+                <h2>¡Bienvenido a la Comunidad!</h2>
+                <p>🎉 Felicidades <span id="nombre-usuario-comunidad">usuario</span>, ahora eres parte de la mejor comunidad de Realistic Soccer.<br>
+                Comparte, comenta y haz nuevos amigos futboleros.</p>
+                <button onclick="cerrarBienvenida()">¡Comenzar!</button>
+            </div>
+        </div>
+        <div class="comunidad-feed comunidad-feed-blur" id="comunidad-feed">
+            <section class="comunidad-postear">
+                <textarea id="nuevo-post" placeholder="¿Qué quieres compartir hoy?" maxlength="240"></textarea>
+                <button onclick="publicarPost()">Publicar</button>
+            </section>
+            <section class="comunidad-amigos-grupos">
+                <div class="comunidad-amigos">
+                    <h3>Amigos</h3>
+                    <ul>
+                        <li>@JuanFutbol <button class="btn-amigo">Añadir</button></li>
+                        <li>@SofiPro <button class="btn-amigo">Añadir</button></li>
+                        <li>@LeoSkills <button class="btn-amigo">Añadir</button></li>
+                    </ul>
+                </div>
+                <div class="comunidad-grupos">
+                    <h3>Grupos virales</h3>
+                    <ul>
+                        <li>⚽ ProPlayers RRS <button class="btn-grupo">Unirse</button></li>
+                        <li>🔥 Jugadas Legendarias <button class="btn-grupo">Unirse</button></li>
+                        <li>🎉 Comunidad Novatos <button class="btn-grupo">Unirse</button></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="comunidad-posts">
+                <div class="comunidad-post">
+                    <span class="comunidad-user">@JuanFutbol</span>
+                    <p>¡Hoy logré mi primer hat-trick en Realistic Soccer! 😎⚽</p>
+                </div>
+                <div class="comunidad-post">
+                    <span class="comunidad-user">@SofiPro</span>
+                    <p>¿Alguien quiere practicar penales esta tarde? ¡Manden mensaje!</p>
+                </div>
+                <div class="comunidad-post">
+                    <span class="comunidad-user">@LeoSkills</span>
+                    <p>Recomiendo el grupo <b>ProPlayers RRS</b> para mejorar en equipo. ¡Unanse!</p>
+                </div>
+                <div class="comunidad-post">
+                    <span class="comunidad-user">@AdminRRS <span class="verified"><svg width="16" height="16" viewBox="0 0 24 24" style="vertical-align:middle;"><circle cx="12" cy="12" r="10" fill="#1da1f2"/><path d="M9.5 13.5l2 2 4-4" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span></span>
+                    <p>¡Bienvenidos a todos los nuevos miembros! Recuerden respetar las reglas y divertirse.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+    // Mostrar nombre si está en localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+        var nombre = localStorage.getItem('nombreUsuario') || 'usuario';
+        document.getElementById('nombre-usuario-comunidad').textContent = nombre;
+    });
+    // Ocultar tarjeta de bienvenida y quitar blur
+    function cerrarBienvenida() {
+        document.getElementById('bienvenida-comunidad').style.display = 'none';
+        document.getElementById('comunidad-feed').classList.remove('comunidad-feed-blur');
+    }
+
+    // Publicar un nuevo post (solo frontend)
+    function publicarPost() {
+        var textarea = document.getElementById('nuevo-post');
+        var texto = textarea.value.trim();
+        if (!texto) return;
+        var nombre = localStorage.getItem('nombreUsuario') || 'usuario';
+        var posts = document.querySelector('.comunidad-posts');
+        var div = document.createElement('div');
+        div.className = 'comunidad-post';
+        div.innerHTML = '<span class="comunidad-user">@' + nombre + '</span><p>' + texto.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</p>';
+        posts.prepend(div);
+        textarea.value = '';
+    }
+    </script>
+    <footer>
+        <p>© 2025 Realistic Soccer. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

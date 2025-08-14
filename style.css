@@ -1,0 +1,627 @@
+
+/* --------- ESTILOS DETALLADOS PARA COMUNIDAD --------- */
+.comunidad-postear {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 18px 18px 12px 18px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comunidad-postear textarea {
+    width: 100%;
+    min-height: 60px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    resize: vertical;
+    margin-bottom: 8px;
+}
+.comunidad-postear button {
+    align-self: flex-end;
+    background: linear-gradient(90deg, #00c3ff 0%, #3a7bd5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.comunidad-postear button:hover {
+    background: linear-gradient(90deg, #3a7bd5 0%, #00c3ff 100%);
+}
+.comunidad-amigos-grupos {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.comunidad-amigos, .comunidad-grupos {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 16px 18px 10px 18px;
+    min-width: 220px;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.comunidad-amigos h3, .comunidad-grupos h3 {
+    color: #00c3ff;
+    margin-top: 0;
+    font-size: 1.15rem;
+}
+.comunidad-amigos ul, .comunidad-grupos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.comunidad-amigos li, .comunidad-grupos li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.btn-amigo, .btn-grupo {
+    background: #fff200;
+    color: #232526;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.98rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-amigo:hover, .btn-grupo:hover {
+    background: #00c3ff;
+    color: #fff;
+}
+.comunidad-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.comunidad-post {
+    background: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    padding: 16px 18px 10px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    color: #fff;
+    font-size: 1.08rem;
+    position: relative;
+}
+.comunidad-user {
+    color: #00c3ff;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+@media (max-width: 700px) {
+    .comunidad-amigos-grupos {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+/* --------- FIN ESTILOS DETALLADOS COMUNIDAD --------- */
+
+/* --------- ESTILOS COMUNIDAD --------- */
+.comunidad-bg {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    min-height: 100vh;
+}
+.comunidad-header {
+    background: linear-gradient(90deg, #00c3ff 0%, #3a7bd5 100%);
+    padding: 32px 0 18px 0;
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    margin-bottom: 0;
+}
+.comunidad-header h1 {
+    color: #fff200;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 8px #000, 0 0 2px #fff;
+}
+.comunidad-bienvenida {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2000;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+.comunidad-bienvenida-tarjeta {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+    padding: 38px 32px 28px 32px;
+    text-align: center;
+    max-width: 400px;
+    width: 90vw;
+    color: #232526;
+    animation: popin 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.comunidad-bienvenida-tarjeta h2 {
+    color: #00c3ff;
+    margin-bottom: 12px;
+    font-size: 2rem;
+}
+.comunidad-bienvenida-tarjeta button {
+    margin-top: 18px;
+    padding: 10px 28px;
+    background: linear-gradient(90deg, #00c3ff 0%, #3a7bd5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s;
+}
+.comunidad-bienvenida-tarjeta button:hover {
+    background: linear-gradient(90deg, #3a7bd5 0%, #00c3ff 100%);
+}
+@keyframes popin {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.comunidad-feed-blur {
+    filter: blur(6px) grayscale(0.2) brightness(0.7);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s;
+}
+.comunidad-feed {
+    margin: 40px auto 80px auto;
+    max-width: 700px;
+    min-height: 300px;
+}
+/* --------- FIN ESTILOS COMUNIDAD --------- */
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(31, 31, 31, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(244, 246, 245);
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b; /* color de fondo que prefieras */
+}
+
+
+/* encabezado */
+header {
+    background-color: rgba(31, 31, 31, 0.85);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.titulo {
+    font-size: 36px;
+    color: #00ffff;
+    margin: 0;
+}
+
+/* formulario de entrada */
+#formulario-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+#formulario-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2efef;
+    color: #da0a0a;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#formulario-container button {
+    padding: 10px 20px;
+    background-color: #00ffd5;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#formulario-container button:hover {
+    background-color: #00c2a2;
+}
+
+/* presentación */
+#presentacion {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgb(10, 10, 10);
+    background-color: rgba(0, 0, 0, 0.75); /* fondo oscuro para legibilidad */
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+
+/* textos en presentación */
+.titulo-secundario {
+    font-size: 1.6rem;
+    color: #00fff7;
+    margin-bottom: 10px;
+}
+
+.intro-texto {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.formulario-presentacion {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #f1ebeb;
+    font-weight: bold;
+}
+
+.texto-central {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+#btnContinuar {
+    background-color: #00fff7;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+#btnContinuar:hover {
+    background-color: #2cd013;
+}
+
+.terminos {
+    margin-top: 15px;
+}
+
+.terminos a {
+    color: #1235c1;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+#fondo-presentacion {
+    background-image: url('imagenes/imagenes/noFilter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --- Estilo del menú de navegación --- */
+#menu-navegacion {
+    background: linear-gradient(90deg, #004aad, #0077ff);
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#menu-navegacion ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-navegacion ul li {
+    position: relative;
+}
+
+#menu-navegacion ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+#menu-navegacion ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Indicador debajo del enlace */
+#menu-navegacion ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+#menu-navegacion ul li a:hover::after {
+    width: 100%;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 600px) {
+    #menu-navegacion ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+#menu-navegacion {
+    background: linear-gradient(90deg, #1e24e3, #eff0e9);
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 30px; /* 🔹 Ajusta este valor para bajarlo más */
+}
+
+/*-------------------------------------------------------*/
+.tarjetas-gif {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 15px;
+  width: 340px;   /* un poco más anchas */
+  height: 500px;  /* más altas */
+  box-shadow: 0 0 15px rgba(227, 222, 222, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 75%;  /* más espacio para el GIF */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tarjeta h3 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* --------- ESTILOS PARA LA PLAYLIST DE TUTORIALES --------- */
+.playlist-tutoriales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 40px auto 60px auto;
+    max-width: 1100px;
+}
+.playlist-tutoriales > div {
+    background: rgba(11, 11, 11, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    padding: 18px 12px 10px 12px;
+    text-align: center;
+    width: 340px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.playlist-tutoriales > div:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+}
+.playlist-tutoriales iframe {
+    width: 100%;
+    height: 190px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+}
+.playlist-tutoriales p {
+    color: hsl(180, 7%, 81%);
+    font-size: 1.08rem;
+    margin: 0;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .playlist-tutoriales {
+        flex-direction: column;
+        align-items: center;
+    }
+    .playlist-tutoriales > div {
+        width: 95vw;
+        max-width: 400px;
+    }
+    .playlist-tutoriales iframe {
+        height: 180px;
+    }
+}
+/* --------- FIN ESTILOS PLAYLIST --------- */
+
+/* --------- ESTILOS INTERACTIVOS PARA TIPS --------- */
+.tip-stats {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-end;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    font-size: 1.05rem;
+    color: #00acee;
+    font-weight: 500;
+}
+.tip-post:hover .tip-stats {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* --------- FIN ESTILOS INTERACTIVOS TIPS --------- */
+/* --------- ESTILOS PARA TIPS TIPO TWITTER --------- */
+/* --------- NUEVO LAYOUT PARA TIPS EN 2 COLUMNAS --------- */
+.tips-feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 900px;
+    margin: 40px auto 80px auto;
+}
+.tip-post {
+    background: rgba(0,0,0,0.7);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    padding: 18px 22px 12px 22px;
+    position: relative;
+    border-left: 5px solid #00acee;
+    min-width: 0;
+}
+@media (max-width: 900px) {
+    .tips-feed {
+        grid-template-columns: 1fr;
+        max-width: 98vw;
+    }
+}
+/* --------- FIN NUEVO LAYOUT TIPS --------- */
+.tip-num {
+    position: absolute;
+    left: -32px;
+    top: 18px;
+    font-size: 1.5rem;
+    color: #00acee;
+    font-weight: bold;
+}
+.tip-user {
+    font-weight: bold;
+    color: #b5e00b;
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+.verified {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+    line-height: 1;
+    /* El color y tamaño lo da el SVG */
+}
+.tip-text {
+    font-size: 1.15rem;
+    color: #f4f6f8;
+    margin: 10px 0 8px 0;
+}
+.tip-date {
+    font-size: 0.95rem;
+    color: #b2b2b2;
+    float: right;
+}
+@media (max-width: 700px) {
+    .tips-feed {
+        max-width: 98vw;
+    }
+    .tip-post {
+        padding: 14px 8vw 10px 8vw;
+    }
+    .tip-num {
+        left: -22px;
+    }
+}
+/* --------- FIN ESTILOS TIPS TWITTER --------- */
+
+/* --------- ESTILOS PERSONALIZADOS PARA TIPS --------- */
+.tips-header {
+    background: linear-gradient(90deg, #0ea3d5 0%, #e1e5ea 100%);
+    padding: 32px 0 18px 0;
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    margin-bottom: 0;
+}
+.tips-header h1 {
+    color: #27ed11;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 8px #000, 0 0 2px #fff;
+}
+
+/* --------- FIN ESTILOS PERSONALIZADOS TIPS --------- */
+
+/* --------- FONDO PARA LA PÁGINA DE TIPS --------- */
+.tips-bg {
+    background-image: url('imagenes/imagenes/noFilter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+/* --------- FIN FONDO TIPS --------- */
